@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  personal-website:
+    image: 182freak/lab12-personal-web:latest
+    container_name: my_personal_website
+    ports:
+      - "8081:80"
+    restart: always
+
+  todo-app:
+    # This is an open-source todo application from DockerHub
+    image: docker/getting-started:latest
+    container_name: open_source_todo
+    ports:
+      - "8082:80"
+    restart: always
